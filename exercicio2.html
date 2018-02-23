@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		/*var idadeAluno = 30;
+		var nomeAluno = 'Raphael';
+		var casado = false;*/
+
+		//Exemplos de array. Array é uma variável composta, que comporta mais de um valor. Array fica entre colchetes e objetos entre chaves.
+		var idadeAluno = 30, nomeAluno = 'Raphael', casado = false;
+		//contagem do array abaixo:
+		//  variavel      0        1        2
+		var formacao = ['Redes', 'Cloud', 'Dev'];
+
+		//   objeto, com suas propriedades e ações (métodos)
+		var pessoa = {
+			idade: 30, 
+			nome: 'Raphael', 
+			casado: false, 
+			andar: function(){
+				alert('Caminhando...')
+				}
+			};
+
+
+
+
+
+
+
+		var x = 'aqui tem um texto';
+		var x = 10, y = 5
+		x++;
+
+
+		console.log(nomeAluno);
+		console.log(formacao);
+		console.log(x);
+
+		//Buscar item de um objeto no console
+		console.log(pessoa['nome']);
+		//ou
+		console.log(pessoa.nome);
+
+		//Conta quantos itens existem no array e exibe no console
+		console.log(formacao.length);
+
+		//Adiciona um item ao final do array
+		formacao.push('WebDev');
+
+		//Adiciona um item no começo do array
+		formacao.unshift('WebDev');
+
+		//Remove o último item do array
+		formacao.pop();
+
+		//Remove o primeiro item do array
+		formacao.shift();
+
+		//Ordena o array
+		formacao.sort();
+
+		//Inverte a ordem do array
+		formacao.reverse();
+
+		//Exibe conteúdo do array como string
+		console.log(formacao.ToString());
+
+		//Traz as informações do array com a separação declarada
+		console.log(formacao.join(' - '));
+	</script>
+</body>
+</html>

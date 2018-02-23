@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var txt = 'Texto qualquer caixa d\'agua';
+		var txt2 = "Pegou \"fogo\" \\ aqui em casa";
+		var numero = 9.16535329
+
+		//Exibe a quantidade de caracteres gravadas na variável
+		console.log(txt.length);
+		//Exibe o número de posição que a palavra ocupa na variável
+		console.log(txt2.indexOf("fogo"));
+		//Igual ao index of
+		console.log(txt2.search("aqui"));
+		//Exibe os primeiros X caracteres da variável, começando em zero
+		console.log(txt2.slice(0, 5));		
+		//Igual ao slice
+		console.log(txt2.substring(0, 10));
+		//Exibe o conteúdo da variavel, com o primeiro número indicando posição e o segundo número, quantidade.
+		console.log(txt2.substr(0, 5));
+		//Substituir conteúdo dentro de uma string
+		console.log(txt2.replace("fogo", "água"));
+		//Converte tudo em maiúsculas
+		console.log(txt2.toUpperCase());
+		//Converte tudo em minúsculas
+		console.log(txt2.toLowerCase());
+		//Exibe apenas os dois primeiros números decimais, arredondando
+		console.log(numero.toFixed(2));
+		//Exibe apenas os dois dígitos
+		console.log(numero.toPrecision(2));
+
+
+	</script>
+</body>
+</html>

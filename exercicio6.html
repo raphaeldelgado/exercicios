@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		/*
+
+		&& e
+		|| ou
+		! não
+
+		*/
+
+		var idade = 16;
+		var situacao = (idade >= 18) ? 'Maioridade':'Menor';
+
+		var n = 5;
+		if (n > 5)
+		{
+			console.log ('Primeira condição verdadeira');
+		}
+		else if (n == 5)
+		{
+			console.log ('Segunda condição verdadeira');
+		}
+		else
+		{
+			console.log ('Condição falsa');
+		}
+
+		console.log(situacao);
+
+
+		var diadasemana = new Date().getDay();
+		switch (diadasemana)
+		{
+			case 0:
+			case 6:
+				console.log('Verdadeiro');
+				break;
+
+			default:
+				console.log('Condição default');
+		}
+
+		var linguagens = ['PHP', 'Java', 'C++', 'Javascript', 'Delphi']
+		for (contador = 0; contador < linguagens.length; contador++)
+		{
+			//if(contador == 2) continue;
+			console.log(linguagens[contador]);
+		}
+
+
+		contagem = 0;
+
+		while(contagem <= 10)
+		{
+			console.log(contagem);
+			contagem++;
+		}
+	</script>
+</body>
+</html>

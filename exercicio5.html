@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var d = new Date();
+		//86400000
+		/*
+		var d = new Date(milissegundos);
+		var d = new Date(string);
+		var d = new Date(ano, mes, dia, hora, minuto, segundo, milissegundo);
+		*/
+
+		console.log(d.getDate());
+		console.log(d.getDay());
+		console.log(d.getFullYear());
+		console.log(d.getHours());
+		console.log(d.getMilliseconds());
+		console.log(d.getMinutes());
+		console.log(d.getMonth());
+		console.log(d.getSeconds());
+		console.log(d.getTime());
+		console.log("Hoje é dia " + d.getDate() + "/" + d.getMonth()+1 + "/" + d.getFullYear() + ", " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds());
+				d.setDate(20);
+		console.log(d.toUTCString());
+		console.log(d.toDateString());
+
+		function formataData(data = new Date())
+		{
+			var dia = data.getDate();
+			var mse = data.getMonth();
+			var ano = data.getFullYear();
+
+			if(dia.toString().length == 1) dia = '0'+dia;
+			if(mes.toString().length == 1) mes = '0'+mes;
+
+			return dia+'/'+mes+'/'+ano;
+		}
+
+
+	</script>
+</body>
+</html>

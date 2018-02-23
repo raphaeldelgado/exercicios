@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lista de Exercicios</title>
+</head>
+<body>
+	<h1>Soma de dois números:</h1>
+		<p></p>
+		Número 1: <input type="text" id="txtsoma1" />
+		Número 2: <input type="text" id="txtsoma2" />
+		<button onclick="calculasoma()">Somar</button>
+		<p id="resultsoma"></p>
+		<p></p>
+	<h1>Divisão de dois números:</h1>
+		Número 1: <input type="text" id="txtdivisao1" />
+		Número 2: <input type="text" id="txtdivisao2" />
+		<button onclick="divide()">Dividir</button>
+		<p id="resultdivisao"></p>
+		<p></p>
+	<h1>Metade e Dobro</h1>
+		Digite o número desejado: <input type="text" id="txtmetadedobro" />
+		<button onclick="metadedobro()">Calcular</button>
+		<p id="resultmetadedobro"></p>
+		<p></p>
+	<h1>Nome e idade daqui há 30 anos</h1>
+		Digite seu nome: <input type="text" id="txtnome" />
+		e a sua idade: <input type="text" id="txtidade" />
+		<button onclick="nomeidade()">Calcular</button>
+		<p id="resultnomeidade"></p>
+		<p></p>
+	<h1>Média de notas</h1>
+		Digite a sua primeira nota: <input type="text" id="txtnota1" />
+		sua segunda nota: <input type="text" id="txtnota2" />
+		e sua terceira nota: <input type="text" id="txtnota3" />
+		<button onclick="calculamedia()">Calcular Média</button>
+		<p id="resultmedia"></p>
+		<p></p>
+	<h1>Multicalculadora</h1>
+		Digite dois números: <input type="text" id="txtmulti1" />
+		<input type="text" id="txtmulti2" />
+		<button onclick="multicalc()">Multicalcular</button>
+		<p id="resultmulti"></p>
+
+	<script type="text/javascript">
+		var numero1;
+		var numero2;
+		var resultado;
+		var metade;
+		var dobro;
+		var idade;
+		var nome;
+		var nota1;
+		var nota2;
+		var nota3;
+		var media;
+		var subtracao12;
+		var subtracao21;
+		var produto;
+		var divisao;
+		var quociente;
+		var usuario;
+		//Exercício 1 - soma
+		function calculasoma()
+			{
+				numero1 = document.getElementById('txtsoma1').value;
+				numero2 = document.getElementById('txtsoma2').value;
+				resultado = parseFloat(numero1) + parseFloat(numero2);
+				document.getElementById('resultsoma').innerHTML = ('O resultado da soma é: ') + resultado;
+				alert('O Resultado da soma é: '+resultado);
+			}
+		
+		//Exercício 2 - Divisão
+			function divide()
+			{
+				numero1 = document.getElementById('txtdivisao1').value;
+				numero2 = document.getElementById('txtdivisao2').value;
+				resultado = numero1 / numero2;
+				document.getElementById('resultdivisao').innerHTML = ('O resultado da divisão é: ') + resultado;
+				alert('O resultado da divisão é: ' + resultado);
+			}
+		
+		//Exercicio 3 - metade e dobro
+			function metadedobro()
+			{
+				numero1 = document.getElementById('txtmetadedobro').value;
+				metade = numero1 / 2;
+				dobro = numero1 * 2;
+				document.getElementById('resultmetadedobro').innerHTML = ('A metade de '+numero1+' é '+metade+' e o dobro é '+dobro);
+				alert('A metade de '+numero1+' é '+metade+' e o dobro é '+dobro);
+
+			}
+		
+		//Exercicio 4 - nome e idade
+			function nomeidade()
+			{
+				//Teste com prompt
+				//usuario = prompt('Informe o seu nome:');
+				nome = document.getElementById('txtnome').value;
+				idade = document.getElementById('txtidade').value;
+				resultado = parseFloat(idade) + 30;
+				document.getElementById('resultnomeidade').innerHTML = ('O seu nome é '+nome+' e a sua idade daqui há 30 anos será '+resultado+' anos.');
+				alert('O seu nome é '+nome+' e a sua idade daqui há 30 anos será '+resultado+' anos.');
+			}
+		//Exercício 5 - média de notas
+			function calculamedia()
+			{
+				nota1 = document.getElementById('txtnota1').value;
+				nota2 = document.getElementById('txtnota2').value;
+				nota3 = document.getElementById('txtnota3').value;
+				media = (parseFloat(nota1) + parseFloat(nota2) + parseFloat(nota3)) / 3;
+				document.getElementById('resultmedia').innerHTML = ('A média das três notas é: '+media);
+				alert('A média das três notas é: '+media);
+
+			}
+		//Exercício 6 - multicalcular
+			function multicalc()
+			{
+				numero1 = document.getElementById('txtmulti1').value;
+				numero2 = document.getElementById('txtmulti2').value;
+				soma = parseFloat(numero1) + parseFloat(numero2);
+				subtracao12 = numero1 - numero2;
+				subtracao21 = numero2 - numero1;
+				produto = numero1 * numero2;
+				divisao = numero1 / numero2;
+				document.getElementById('resultmulti').innerHTML = ('A soma é '+soma+', a subtração do primeiro pelo segundo é '+subtracao12+', a subtração do segundo pelo primeiro é '+subtracao21+', o produto é '+produto+' e a divisão é '+divisao+'.');
+				alert('A soma é '+soma+', a subtração do primeiro pelo segundo é '+subtracao12+', a subtração do segundo pelo primeiro é '+subtracao21+', o produto é '+produto+' e a divisão é '+divisao+'.');
+			}
+	</script>
+</body>
+</html>
